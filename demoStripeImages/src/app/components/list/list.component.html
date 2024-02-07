@@ -1,0 +1,12 @@
+<div class="product-list">
+  <h2>Product List</h2>
+  <ul>
+    <li *ngFor="let product of products" class="product-card">
+      <h4>{{ product.name }}</h4>
+      <img priority="automatically" ngSrc='{{product.image}}' height="200" width="200" alt='{{product.name}}'/>
+      <p>Price: {{ product.price }} €</p>
+      <p>Category: {{ product.category }}</p>
+      <button mat-raised-button color="primary" (click)="buyProduct(product)">Buy</button>
+    </li>
+  </ul>
+</div>
